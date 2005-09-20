@@ -3,6 +3,9 @@ Makefile.PL
 MANIFEST
 README
 lib/Log/Localized.pm
+t/Utils.pm
+t/Foo.pm
+t/Foo/Bar.pm
 t/01_test_logging_off.t
 t/02_test_global_switch_on.t
 t/03_test_verbosity_rules.t

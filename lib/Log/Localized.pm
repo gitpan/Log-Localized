@@ -2,7 +2,7 @@
 #
 #   Log::Localized - Dispatch log messages depending on local verbosity
 #
-#   $Id: Localized.pm,v 1.8 2005/09/20 19:45:52 erwan Exp $
+#   $Id: Localized.pm,v 1.9 2005/09/20 20:06:43 erwan Exp $
 #
 #   050909 erwan Created 
 #
@@ -23,7 +23,7 @@ use File::HomeDir;
 
 # TODO: load all Dispatcher plugins? is it necessary?
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 #----------------------------------------------------------------
 #
