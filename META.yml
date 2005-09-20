@@ -1,0 +1,21 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Log-Localized
+version:      0.01
+version_from: lib/Log/Localized.pm
+installdirs:  site
+requires:
+    Config::Tiny:                  2.02
+    File::HomeDir:                 0.06
+    File::Spec:                    3.11
+    File::Temp:                    0.14
+    Log::Dispatch:                 2.11
+    Log::Dispatch::Config:         1.01
+    Log::Dispatch::Screen:         1.17
+    Test::NoWarnings:              0.07
+    Test::Pod:                     1.2
+    Test::Pod::Coverage:           1.06
+    Test::Warn:                    0.08
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.17
