@@ -2,7 +2,7 @@
 #
 #   Log::Localized - Dispatch log messages depending on local verbosity
 #
-#   $Id: Localized.pm,v 1.9 2005/09/20 20:06:43 erwan Exp $
+#   $Id: Localized.pm,v 1.11 2005/09/21 06:56:28 erwan Exp $
 #
 #   050909 erwan Created 
 #
@@ -23,7 +23,7 @@ use File::HomeDir;
 
 # TODO: load all Dispatcher plugins? is it necessary?
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 #----------------------------------------------------------------
 #
@@ -817,7 +817,9 @@ log, you have to use the 'log' parameter with the value 0 (off) or 1 (on):
     
 =head1 EXPORTED FUNCTIONS
 
-=head2 B<llog>($level,$message)
+=over 4
+
+=item B<llog>($level,$message)
 
 Where I<$level> is an integer, and I<$message> is either a string or 
 a reference to a function that returns a string.
@@ -845,33 +847,47 @@ anonymous function:
 
     llog(4, sub { "content of this hugely complex object: ".Dumper($obj); } );
 
+=back
+
 =head1 CLASS VARIABLES
 
-=head2 B<$Log::Localized::VERBOSITY>
+=over 4
+
+=item B<$Log::Localized::VERBOSITY>
 
 See 'LOGGING ALGORITHM' for details and 'SYNOPSIS' for examples.
 
-=head2 B<$Log::Localized::LEVEL>
+=item B<$Log::Localized::LEVEL>
 
 Contains the level of the message last received by I<llog>. This class variable
 is made to be used by closures that are passed to I<llog>. See the example in the
 'examples' directory.
 
+=back
+
 =head1 WARNING
 
-=head2 FORKING, THREADING
+=over 4
 
-Log::Localized is not designed to be used simultaneously by multiple threads or processes. 
+=item B<Forking, threading> Log::Localized is not designed to be used simultaneously 
+by multiple threads or processes. 
 
-=head2 MONITORING RULE CHANGES
-
-Log::Localized loads the verbosity rules only once, at 'use' time, and will not
+=item B<Monitoring rule changes> Log::Localized loads the verbosity rules only once, 
+at 'use' time, and will not
 notice later changes of the rules file during runtime. This may be implemented 
 in the future.
 
+=back
+
 =head1 SEE ALSO
 
-See Log::Dispatch, Log:Log4perl.
+See Log::Dispatch, Log::Log4perl.
+
+=head1 BUGS AND LIMITATIONS
+
+Please report any bugs or feature requests to
+C<bug-log-localized@rt.cpan.org>, or through the web interface at
+L<http://rt.cpan.org>.
 
 =head1 FOR FUN
 
@@ -881,15 +897,38 @@ dump the rule 'Log::Localized:: = 3' in a local file called 'verbosity.conf'...
 
 =head1 AUTHOR
 
-Written by Erwan Lemonnier (erwan@cpan.org)
-and co-designed by Claes Jacobsson.
+Written by Erwan Lemonnier C< <<erwan@cpan.org>> >
+and co-designed by Claes Jacobsson C<< <claesjac@cpan.org> >>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005 by Erwan Lemonnier
+Copyright (C) 2005 by Erwan Lemonnier C< <<erwan@cpan.org>> >
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This module is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself. See L<perlartistic>.
+
+=head1 DISCLAIMER OF WARRANTY
+
+BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+PROVIDE THE SOFTWARE "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
+ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH
+YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
+NECESSARY SERVICING, REPAIR, OR CORRECTION.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+REDISTRIBUTE THE SOFTWARE AS PERMITTED BY THE ABOVE LICENCE, BE
+LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL,
+OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE
+THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
+RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
+FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
+SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
 
 =cut
 

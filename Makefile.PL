@@ -1,4 +1,4 @@
-use 5.008002;
+use 5.006;
 use ExtUtils::MakeMaker;
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
@@ -12,11 +12,6 @@ WriteMakefile(
 	  Log::Dispatch::Screen => 1.17,
 	  File::Spec => 3.11,
 	  File::HomeDir => 0.06,
-	  Test::NoWarnings => 0.07,
-	  Test::Warn => 0.08,
-	  File::Temp => 0.14,
-	  Test::Pod => 1.20,
-	  Test::Pod::Coverage => 1.06,
     },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Log/Localized.pm', # retrieve abstract from module

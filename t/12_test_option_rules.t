@@ -1,7 +1,7 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 12_test_option_rules.t,v 1.3 2005/09/20 06:43:50 erwan Exp $
+#   $Id: 12_test_option_rules.t,v 1.4 2005/09/21 06:38:43 erwan Exp $
 #
 #   050919 erwan Created
 #   
@@ -21,6 +21,7 @@ BEGIN {
     Utils::backup_log_settings();
 
       my $conf = "".
+	  "[12_test_option_rules.t]\n".
 	  "main:: = 2\n".
 	  "main::test2 = 4\n".
 	  "Foo::test1  = 3\n".
