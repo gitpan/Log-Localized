@@ -1,19 +1,18 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 10_test_option_dispatchers.t,v 1.2 2005/09/19 18:47:07 erwan Exp $
+#   $Id: 10_test_option_dispatchers.t,v 1.3 2005/11/07 16:49:09 erwan Exp $
 #
 #   test dispatching to a file
 #
 #   050914 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
+use Test::More;
 use Data::Dumper;
-use Test::More tests => 7;
-use Test::NoWarnings;
-use File::Spec;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 
@@ -21,6 +20,11 @@ my $log_file;
 my $dispatch_file;
 
 BEGIN { 
+    eval "use File::Spec";
+    plan skip_all => "File::Spec required for testing option dispatchers" if $@;
+
+    plan tests => 6;
+
     # using Log::Localized with global verbosity off but config file
 
     $dispatch_file = File::Spec->catfile($ENV{PWD},"dispatch.tmp");

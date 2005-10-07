@@ -1,16 +1,16 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 01_test_logging_off.t,v 1.3 2005/09/19 18:47:05 erwan Exp $
+#   $Id: 01_test_logging_off.t,v 1.4 2005/11/07 16:49:09 erwan Exp $
 #
 #   050912 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
 use Data::Dumper;
-use Test::More tests => 17;
-use Test::NoWarnings;
+use Test::More tests => 16;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 

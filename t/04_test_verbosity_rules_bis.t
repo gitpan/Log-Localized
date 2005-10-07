@@ -1,18 +1,18 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 04_test_verbosity_rules_bis.t,v 1.2 2005/09/19 18:47:06 erwan Exp $
+#   $Id: 04_test_verbosity_rules_bis.t,v 1.3 2005/11/07 16:49:09 erwan Exp $
 #
 #   same as 03, but test the ::* rules
 #
 #   050914 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
 use Data::Dumper;
-use Test::More tests => 45;
-use Test::NoWarnings;
+use Test::More tests => 44;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 

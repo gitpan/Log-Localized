@@ -1,23 +1,26 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 07_test_get_search_path.t,v 1.1 2005/09/18 16:03:43 erwan Exp $
+#   $Id: 07_test_get_search_path.t,v 1.2 2005/11/07 16:49:09 erwan Exp $
 #
 #   test _get_search_path
 #
 #   050918 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
 use Data::Dumper;
-use Test::More tests => 8;
-use Test::NoWarnings;
-use File::HomeDir;
+use Test::More;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 
 BEGIN {
+    eval "use File::HomeDir";
+    plan skip_all => "File::HomeDir required for testing search path" if $@;
+
+    plan tests => 7;
     $ENV{TEST1} = "test1";
     $ENV{TEST2} = "test2";
     

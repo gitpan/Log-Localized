@@ -1,18 +1,17 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 22_test_param_rename.t,v 1.1 2005/09/20 18:40:04 erwan Exp $
+#   $Id: 22_test_param_rename.t,v 1.2 2005/11/07 16:49:10 erwan Exp $
 #
 #   test renaming llog in calling package
 #
 #   050919 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
-use Data::Dumper;
-use Test::More tests => 5;
-use Test::NoWarnings;
+use Test::More tests => 4;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 

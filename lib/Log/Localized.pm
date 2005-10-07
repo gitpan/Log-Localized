@@ -2,7 +2,7 @@
 #
 #   Log::Localized - Dispatch log messages depending on local verbosity
 #
-#   $Id: Localized.pm,v 1.11 2005/09/21 06:56:28 erwan Exp $
+#   $Id: Localized.pm,v 1.12 2005/09/21 08:41:15 erwan Exp $
 #
 #   050909 erwan Created 
 #
@@ -23,7 +23,7 @@ use File::HomeDir;
 
 # TODO: load all Dispatcher plugins? is it necessary?
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 #----------------------------------------------------------------
 #
@@ -897,12 +897,12 @@ dump the rule 'Log::Localized:: = 3' in a local file called 'verbosity.conf'...
 
 =head1 AUTHOR
 
-Written by Erwan Lemonnier C< <<erwan@cpan.org>> >
+Written by Erwan Lemonnier C<< <erwan@cpan.org> >>
 and co-designed by Claes Jacobsson C<< <claesjac@cpan.org> >>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005 by Erwan Lemonnier C< <<erwan@cpan.org>> >
+Copyright (C) 2005 by Erwan Lemonnier C<< <erwan@cpan.org> >>
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself. See L<perlartistic>.

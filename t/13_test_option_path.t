@@ -1,22 +1,26 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 13_test_option_path.t,v 1.3 2005/09/20 19:45:52 erwan Exp $
+#   $Id: 13_test_option_path.t,v 1.4 2005/11/07 16:49:09 erwan Exp $
 #
 #   050919 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
-use Test::More tests => 3;
-use Test::NoWarnings;
-use File::Temp qw/ tmpnam /;
+use Test::More;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 
 my $dirname;
 
 BEGIN { 
+    eval "use File::Temp qw /tmpnam/";
+    plan skip_all => "File::Temp required for testing option rules" if $@;
+
+    plan tests => 2;
+
     Utils::backup_log_settings();
 
       # get a temporary filename

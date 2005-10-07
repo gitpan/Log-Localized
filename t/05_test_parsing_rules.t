@@ -1,18 +1,18 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 05_test_parsing_rules.t,v 1.1 2005/09/19 18:47:07 erwan Exp $
+#   $Id: 05_test_parsing_rules.t,v 1.2 2005/11/07 16:49:09 erwan Exp $
 #
 #   test rules when rules defined in blocks, per program
 #
 #   050919 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
 use Data::Dumper;
-use Test::More tests => 3;
-use Test::NoWarnings;
+use Test::More tests => 2;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 

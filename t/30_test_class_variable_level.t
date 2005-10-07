@@ -1,16 +1,14 @@
 #!/usr/bin/perl
 #################################################################
 #
-#   $Id: 30_test_class_variable_level.t,v 1.1 2005/09/18 16:35:06 erwan Exp $
+#   $Id: 30_test_class_variable_level.t,v 1.2 2005/11/07 16:49:10 erwan Exp $
 #
 #   050912 erwan Created
 #
 
 use strict;
 use warnings;
-use Data::Dumper;
-use Test::More tests => 5;
-use Test::NoWarnings;
+use Test::More tests => 4;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 

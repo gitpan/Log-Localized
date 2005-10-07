@@ -1,15 +1,15 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 15_test_option_global_verbosity.t,v 1.2 2005/09/19 18:47:09 erwan Exp $
+#   $Id: 15_test_option_global_verbosity.t,v 1.3 2005/11/07 16:49:09 erwan Exp $
 #
 #   050919 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
-use Test::More tests => 15;
-use Test::NoWarnings;
+use Test::More tests => 14;
 use lib ("./t/", "../lib/", "./lib/");
 
 use Utils;

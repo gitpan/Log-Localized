@@ -1,16 +1,15 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 20_test_param_log.t,v 1.1 2005/09/18 16:35:06 erwan Exp $
+#   $Id: 20_test_param_log.t,v 1.2 2005/11/07 16:49:10 erwan Exp $
 #
 #   050915 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
-use Data::Dumper;
-use Test::More tests => 3;
-use Test::NoWarnings;
+use Test::More tests => 2;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 

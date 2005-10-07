@@ -1,19 +1,18 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 11_test_option_format.t,v 1.2 2005/09/19 18:47:08 erwan Exp $
+#   $Id: 11_test_option_format.t,v 1.4 2005/11/07 16:54:00 erwan Exp $
 #
 #   test format option
 #
 #   050915 erwan Created
+#   051007 erwan Fix dependencies
 #   
 
 use strict;
 use warnings;
 use Data::Dumper;
-use Test::More tests => 6;
-use Test::NoWarnings;
-use File::Spec;
+use Test::More;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 
@@ -21,6 +20,11 @@ my $log_file;
 my $dispatch_file;
 
 BEGIN { 
+    eval "use File::Spec";
+    plan skip_all => "File::Spec required for testing option dispatchers" if $@;
+
+    plan tests => 5;
+    
     $dispatch_file = File::Spec->catfile($ENV{PWD},"dispatch.tmp");
     $log_file = File::Spec->catfile($ENV{PWD},"log.tmp");
 
@@ -71,7 +75,7 @@ while(my $line = <LOG>) {
 close(LOG) or die "ERROR: failed to close log file [$log_file]:$!\n";
 
 is($lines,1,"checked logged only 1 line");
-is($txt,"[main]-[test]-[56]-[1]-[that should be logged]","check all tags were properly substituted");
+is($txt,"[main]-[test]-[60]-[1]-[that should be logged]","check all tags were properly substituted");
 
 unlink $dispatch_file;
 unlink $log_file;

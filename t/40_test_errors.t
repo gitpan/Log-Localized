@@ -1,16 +1,14 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 40_test_errors.t,v 1.2 2005/09/20 09:11:08 erwan Exp $
+#   $Id: 40_test_errors.t,v 1.3 2005/11/07 16:49:10 erwan Exp $
 #
 #   050919 erwan Created
 #   
 
 use strict;
 use warnings;
-use Data::Dumper;
-use Test::More tests => 11;
-use Test::NoWarnings;
+use Test::More tests => 10;
 use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 
