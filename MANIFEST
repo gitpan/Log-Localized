@@ -26,8 +26,8 @@ t/22_test_param_rename.t
 t/30_test_class_variable_level.t
 t/40_test_errors.t
 t/41_test_warnings.t
-t/90_test_pod.t
-t/91_test_pod_coverage.t
+t/pod.t
+t/pod-coverage.t
 META.yml                                 Module meta-data (added by MakeMaker)
 examples/cmdline.pl
 examples/rename.pl

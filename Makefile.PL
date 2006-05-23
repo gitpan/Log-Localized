@@ -6,11 +6,11 @@ WriteMakefile(
     NAME              => 'Log::Localized',
     VERSION_FROM      => 'lib/Log/Localized.pm', # finds $VERSION
     PREREQ_PM         => {
-	Config::Tiny => 2.02,
-	  Log::Dispatch => 2.11,
+	Config::Tiny => 2.01,
+	  Log::Dispatch => 2.10,
 	  Log::Dispatch::Config => 1.01,
-	  Log::Dispatch::Screen => 1.17,
-	  File::Spec => 3.11,
+	  Log::Dispatch::Screen => 1.01,
+	  File::Spec => 0.86,
 	  File::HomeDir => 0.06,
     },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005

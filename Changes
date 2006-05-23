@@ -12,5 +12,7 @@ Revision history for Perl extension Log::Localized.
         - fixed perl version in makefile
 
 0.04  2005-10-07
-        - fixed module dependencies in tests
+        - fixed pod
 
+0.05  2006-05-23
+        - support change in File::HomeDir api

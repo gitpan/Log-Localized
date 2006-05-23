@@ -1,7 +1,7 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 41_test_warnings.t,v 1.3 2005/11/07 16:49:10 erwan Exp $
+#   $Id: 41_test_warnings.t,v 1.4 2006/05/23 14:14:02 erwan Exp $
 #
 #   050919 erwan Created
 #   
@@ -14,8 +14,10 @@ use lib ("./t/", "../lib/", "./lib/");
 use Utils;
 
 BEGIN { 
-    eval "use Test::Warn";
+    eval "use Test::Warn;";
     plan skip_all => "Test::Warn required for testing warnings" if $@;
+
+    use Test::Warn; # huh? eval 'Test::Warn' should be enough, but is not
 
     plan tests => 3;
 

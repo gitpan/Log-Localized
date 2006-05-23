@@ -1,5 +1,5 @@
-Log-Localized version 0.01
-==========================
+Log-Localized
+=============
 
 Log::Localized, a module for logging messages based on the
 local level of verbosity in the part of the code currently
@@ -49,7 +49,7 @@ COPYRIGHT AND LICENCE
 
 Put the correct copyright and licence information here.
 
-Copyright (C) 2005 by Erwan Lemonnier
+Copyright (C) by Erwan Lemonnier
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.2 or,

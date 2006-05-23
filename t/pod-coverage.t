@@ -1,7 +1,7 @@
 #!/usr/local/bin/perl
 #################################################################
 #
-#   $Id: 91_test_pod_coverage.t,v 1.2 2005/09/20 06:50:04 erwan Exp $
+#   $Id: pod-coverage.t,v 1.1 2006/05/23 13:58:46 erwan Exp $
 #
 #   050912 erwan Created
 #   

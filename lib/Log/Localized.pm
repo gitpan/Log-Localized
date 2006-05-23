@@ -2,9 +2,10 @@
 #
 #   Log::Localized - Dispatch log messages depending on local verbosity
 #
-#   $Id: Localized.pm,v 1.12 2005/09/21 08:41:15 erwan Exp $
+#   $Id: Localized.pm,v 1.13 2006/05/23 14:03:18 erwan Exp $
 #
 #   050909 erwan Created 
+#   060523 erwan Adapt to api change in File::HomeDir
 #
 
 package Log::Localized;
@@ -23,7 +24,7 @@ use File::HomeDir;
 
 # TODO: load all Dispatcher plugins? is it necessary?
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 #----------------------------------------------------------------
 #
@@ -290,7 +291,7 @@ sub _init_dispatchers {
 
 sub _get_search_path {
     my $strpath = shift; # path in usual unix style path1:path2:...
-    my $home = home();
+    my $home = home() or confess "ERROR: your system does not seem to support home directories";
     my @search_path = ();
     foreach my $path (split(":",$strpath)) {
 	$path =~ s/\~/$home/g;
